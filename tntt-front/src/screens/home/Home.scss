@@ -1,0 +1,131 @@
+@use "../../index.scss" as *;
+
+.tooltip {
+  position: fixed;
+  z-index: 1000;
+  top: 3rem;
+  right: 12rem;
+
+  .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    margin-left: -70px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .floating-hot {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: $primary-color;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    button {
+      all: unset;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+    }
+  }
+
+  &:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+  overflow: wrap;
+  flex-wrap: wrap;
+
+  .news-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .horizontal-slider {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .news-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: azure;
+    margin: 1rem;
+    padding: 1rem;
+    width: 80vh;
+    border-radius: 1rem;
+    flex: 0 0 20%; /* each child fills 20% of viewport width */
+    scroll-snap-align: start; /* snap point at each item's start */
+    scroll-snap-stop: always;
+    height: 50vh;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .content {
+      font-size: 1rem;
+      text-align: justify;
+      overflow: hidden;
+    }
+  }
+
+  .news-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1rem);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}

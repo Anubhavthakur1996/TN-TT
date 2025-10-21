@@ -1,0 +1,37 @@
+{
+  "name": "TN&TT",
+  "version": "0.0.1",
+  "description": "It's a college project to track trending news and topics from the internet. It's name is Trending News & Topic Tracker or TN&TT for short. It's built by yours truely, The GameFreak (Thakur Anubhav Singh). Maybe I'll extend it in the future or maybe not, depends on my mood and time after wrapping my ME.",
+  "author": "GameFreak (Thakur Anubhav Singh)",
+  "type": "module",
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "trending",
+    "news",
+    "new york times",
+    "the guardian",
+    "x"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "start": "./bin/app",
+    "dev": "npx nodemon ./bin/app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "mysql2": "^3.15.2",
+    "pino": "^9.9.4",
+    "pino-http": "^10.5.0",
+    "pino-pretty": "^13.1.1"
+  }
+}

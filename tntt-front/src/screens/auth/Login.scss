@@ -1,0 +1,25 @@
+@use "../../index.scss" as *;
+
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $tertiary-color;
+
+  .login-form {
+    display: flex;
+    padding: 2vw;
+    min-height: 40%;
+    width: 25%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+    border-radius: 1rem;
+
+    .inp {
+      width: 98%;
+      margin-bottom: 1rem;
+    }
+  }
+}

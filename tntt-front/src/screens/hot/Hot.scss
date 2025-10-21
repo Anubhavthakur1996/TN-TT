@@ -1,0 +1,110 @@
+@use "../../index.scss" as *;
+
+.hot-news-page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  background-color: $primary-color;
+
+  .page-title {
+    text-align: center;
+    font-size: xxx-large;
+  }
+
+  .clicks-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+  }
+
+  .clicks-wrapper:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .clicks-wrapper div {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  .hot-news-main,
+  .hot-news {
+    background-color: aliceblue;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .hot-news-main {
+    width: 84%;
+
+    .clicks-main {
+      text-align: end;
+      font-size: 6rem;
+    }
+
+    .clicks-main-text {
+      text-align: center;
+      padding-top: 3.5rem;
+      font-size: xx-large;
+    }
+
+    .main-title-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title-main {
+      font-size: xx-large;
+      font-weight: bold;
+      text-align: center;
+      padding: 5rem 0 2rem 0;
+    }
+
+    .content-main {
+      font-size: x-large;
+      padding: 2rem 0;
+    }
+  }
+
+  .hot-news {
+    width: 40%;
+    padding: 2rem 1rem;
+    display: flex;
+    img {
+      width: 70%;
+    }
+    .hot-news-content-wrap {
+      padding: 0 0 2rem 2rem;
+      .title {
+        font-size: larger;
+      }
+
+      .content {
+        margin-top: 1rem;
+        font-size: medium;
+      }
+    }
+
+    .clicks {
+      font-size: xx-large;
+    }
+
+    .clicks-overlay {
+      font-size: larger;
+      text-align: center;
+      padding-top: 0.8rem;
+    }
+  }
+
+  .hot-news-page,
+  .hot-news:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1rem);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
