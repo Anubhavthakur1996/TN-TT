@@ -32,6 +32,10 @@ const Hot = () => {
     }
   }, [nav, token]);
 
+  const newsClick = (item) => {
+    return window.open(item.url, "_blank noopener noreferrer");
+  };
+
   if (loading) {
     return <div className="loading">Loading...</div>;
   }
@@ -46,7 +50,11 @@ const Hot = () => {
       {hotNews &&
         hotNews?.map((news, index) =>
           index === 0 ? (
-            <div key={index} className={"hot-news-main shadow"}>
+            <div
+              key={index}
+              className={"hot-news-main shadow"}
+              onClick={() => newsClick(news)}
+            >
               <div className="main-title-wrapper">
                 <div className="title-main">{news?.title}</div>
                 <div className="clicks-wrapper">
