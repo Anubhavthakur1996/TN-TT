@@ -74,7 +74,11 @@ const Hot = () => {
               <div className="content-main">{news?.abstract}</div>
             </div>
           ) : (
-            <div key={index} className={"hot-news shadow"}>
+            <div
+              key={index}
+              className={"hot-news shadow"}
+              onClick={() => newsClick(news)}
+            >
               {news?.img ? (
                 <img src={news?.img} alt={"hot news"} width={"100%"}></img>
               ) : (
